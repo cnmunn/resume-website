@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+
+/* Base reset */
+:root{
+  --main-red: #ff5c5c;
+  --main-orange: #ffa860;
+  --main-yellow: #f5da44;
+  --main-green: #2eba17;
+  --main-blue: #6fbaff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+/*---------! End of presets !-------------*/
+/*---------! Background Image !-----------*/
+
+.page-wrapper{
+  background: url(https://i.pinimg.com/originals/54/bc/aa/54bcaa419eeac14e66981a199c053d7c.jpg) no-repeat center center fixed;
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.nav{
+  display: flex;
+  justify-content: center;
+  background-color: #FFDB58;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  font-family: 'Poppins';
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+  align-items: center;
+}
+
+.nav-list a{
+  display: block;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.nav-list a:visited{
+  color: #6FBAFF;
+}
+
+#welcome-header{
+  padding-top: 2rem;
+  font-family: 'Poppins';
+  font-size: 30px;
+  color: blue;
+  margin: 0 auto 4rem auto;
+  border-bottom: 0.2rem solid black;
+}
+
+.welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 200px;
+}
+
+#welcome-para-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  background-color: #DCDCDC;
+  opacity: 95%;
+  border-radius: 5px;
+  font-size: 15px;
+  border-style: solid;
+  padding: 40px;
+  border-color: #fff;
+  font-family: 'Poppins';
+}
+
+#headshot{
+  flex: 1;
+  background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-flower-delivery-services-online-1588080590.jpg) no-repeat center center fixed;
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.info-para{
+  flex: 2;
+  background-color: gray;
+  padding: 2em;
+  border-radius: 20px;
+}
